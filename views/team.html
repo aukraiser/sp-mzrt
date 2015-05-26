@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% import "macros/numbers.html" as numbers %}
+
+{% block title %}Team{% endblock %}
+
+{% block body %}
+    <div class="panel">
+        <table class="list list-team">
+            {% for user in team %}
+            <tr>
+                <td class="list-icon">
+                    <div>
+                        {% if user.machine %}
+                        <i class="ion-android-home"></i>
+                        {% else %}
+                        <i class="ion-android-contact"></i>
+                        {% endif %}
+                    </div>
+                </td>
+                <td><b>{{ user.name }}</b></td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.phone }}</td>
+                <td class="list-actions">
+                    <a href="{{ numbers.callUrl(user.phone) }}">
+                        <i class="ion-android-call"></i>
+                    </a>
+                    <a href="{{ numbers.smsUrl(user.phone) }}">
+                        <i class="ion-android-textsms"></i>
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

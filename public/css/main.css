@@ -1,0 +1,475 @@
+/**
+ * Global Reset of all HTML Elements
+ *
+ * Resetting all of our HTML Elements ensures a smoother
+ * visual transition between browsers. If you don't believe me,
+ * try temporarily commenting out this block of code, then go
+ * and look at Mozilla versus Safari, both good browsers with
+ * a good implementation of CSS. The thing is, all browser CSS
+ * defaults are different and at the end of the day if visual
+ * consistency is what we're shooting for, then we need to
+ * make sure we're resetting all spacing elements. Les!
+ *
+ */
+html,
+body {
+  border: 0;
+  font-family: "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+div,
+span,
+object,
+iframe,
+img,
+table,
+caption,
+thead,
+tbody,
+tfoot,
+tr,
+tr,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+hgroup,
+menu,
+nav,
+footer,
+header,
+section,
+summary,
+mark,
+audio,
+video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cit,
+code,
+del,
+dfn,
+em,
+ins,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+b,
+i,
+hr,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+legend,
+label {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+canvas,
+figure,
+figure img,
+figcaption,
+hgroup,
+footer,
+header,
+nav,
+section,
+audio,
+video {
+  display: block;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+table caption,
+table th,
+table td {
+  text-align: left;
+  vertical-align: middle;
+}
+a img {
+  border: 0;
+}
+:focus {
+  outline: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.hidden {
+  display: none;
+}
+.list {
+  width: 100%;
+  background: #fff;
+}
+.list tr td {
+  padding: 14px 10px;
+  border-bottom: 1px solid #ececec;
+  vertical-align: middle;
+  line-height: 24px;
+}
+.list tr td a {
+  text-decoration: none;
+  color: inherit;
+}
+.list tr td a:focus,
+.list tr td a:hover {
+  text-decoration: underline;
+}
+.list tr td.list-icon {
+  text-align: center;
+}
+.list tr td i {
+  font-size: 24px;
+  display: inline-block;
+}
+.list tr td i.secondary {
+  font-size: 14px;
+}
+.list tr td .help {
+  color: #aaa;
+}
+.list tr td.list-actions {
+  text-align: center;
+}
+.list tr td.list-actions a {
+  display: inline-block;
+  padding: 0px 8px;
+  color: #aaa;
+}
+.list tr td.list-actions a:hover {
+  color: #555;
+}
+.list tr td.list-alternate {
+  background: #f5f5f5;
+}
+.panel {
+  margin: 20px 0px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+.navigation {
+  width: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: stretch;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  align-items: stretch;
+}
+.navigation .tab {
+  border-bottom: 4px solid transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.navigation .tab.active {
+  border-bottom-color: #0288d1;
+}
+.navigation .tab.tab-link {
+  color: #999;
+  font-weight: 300;
+  padding: 14px;
+  -webkit-flex-grow: 2;
+  -moz-flex-grow: 2;
+  -ms-flex-grow: 2;
+  flex-grow: 2;
+}
+.navigation .tab.tab-action {
+  font-size: 24px;
+  color: inherit;
+  text-decoration: none;
+  padding: 0px 14px;
+  line-height: 50px;
+  color: #999;
+}
+.navigation .tab.tab-action i {
+  display: inline-block;
+}
+.navigation .tab.tab-action:hover {
+  text-decoration: none;
+}
+.tooltip {
+  display: inline;
+  position: relative;
+}
+.tooltip:hover:after {
+  line-height: 1em;
+  background: #111;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 1px;
+  bottom: calc(100% + 10px);
+  color: #fff;
+  content: attr(title);
+  display: block;
+  left: 5px;
+  padding: 5px 5px;
+  position: absolute;
+  text-shadow: 0 1px 0 #000;
+  white-space: nowrap;
+  z-index: 98;
+  font-size: 13px;
+  text-transform: none;
+}
+.tooltip:hover:before {
+  border: solid;
+  border-color: #111 transparent;
+  border-color: rgba(0, 0, 0, 0.9) transparent;
+  border-width: 5px 5px 0px 5px;
+  bottom: calc(100% + 5px);
+  content: "";
+  display: block;
+  left: 10px;
+  position: absolute;
+  z-index: 99;
+}
+.tooltip.tooltip-bottom:after {
+  bottom: auto;
+  top: calc(100% + 10px);
+}
+.tooltip.tooltip-bottom:before {
+  bottom: auto;
+  top: calc(100% + 5px);
+  border-width: 0px 5px 5px 5px;
+}
+.dialog-container {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  overflow: auto;
+}
+.dialog-container.active {
+  display: block;
+}
+.dialog-container .dialog {
+  width: 400px;
+  margin: 40px auto;
+  background: #eee;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+.dialog-container .dialog .dialog-inner {
+  padding: 20px;
+  text-align: center;
+}
+.dialog-container .dialog .dialog-inner .dialog-intro {
+  margin-bottom: 20px;
+}
+.dialog-container .dialog .dialog-inner .dialog-intro h1 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.dialog-container .dialog .dialog-inner .dialog-intro p {
+  color: #666;
+}
+.dialog-container .dialog .dialog-controls {
+  width: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: stretch;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  align-items: stretch;
+}
+.dialog-container .dialog .dialog-controls button {
+  -webkit-flex-grow: 2;
+  -moz-flex-grow: 2;
+  -ms-flex-grow: 2;
+  flex-grow: 2;
+}
+.form-control {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  font-size: 1.1rem;
+  border: 1px solid #ddd;
+}
+button,
+.button {
+  background: #fff;
+  border-radius: 0px;
+  border: 1px solid #eee;
+  font-size: 16px;
+  cursor: pointer;
+  color: #222;
+  padding: 14px;
+  text-decoration: none;
+}
+button:hover,
+.button:hover {
+  color: #000;
+}
+.dialpad {
+  margin-left: -6px;
+  margin-right: -6px;
+}
+.dialpad table {
+  width: 100%;
+  border-spacing: 6px;
+}
+.dialpad table input {
+  width: 100%;
+  background: #fff;
+  border-radius: 0px;
+  border: 1px solid #eee;
+  font-size: 16px;
+  cursor: pointer;
+  color: #222;
+  padding: 14px;
+  text-decoration: none;
+}
+.dialpad table input:hover {
+  color: #000;
+}
+.audio-player {
+  background: #eee;
+  width: 300px;
+  overflow: hidden;
+}
+.audio-player .audio-inner {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: stretch;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  align-items: stretch;
+}
+.audio-player button {
+  padding: 4px 14px;
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+}
+.audio-player .position {
+  -webkit-flex-grow: 2;
+  -moz-flex-grow: 2;
+  -ms-flex-grow: 2;
+  flex-grow: 2;
+  padding: 0px 10px;
+  line-height: 38px;
+  font-size: 16px;
+}
+.audio-player .do-pause,
+.audio-player .do-stop {
+  display: none;
+}
+.audio-player.playing .do-pause,
+.audio-player.playing .do-stop {
+  display: block;
+}
+.audio-player.playing .do-play {
+  display: none;
+}
+.audio-player.paused .do-play,
+.audio-player.paused .do-stop {
+  display: block;
+}
+.audio-player.paused .do-pause {
+  display: hidden;
+}
+.pagination {
+  zoom: 1;
+}
+.pagination:before,
+.pagination:after {
+  content: "";
+  display: table;
+}
+.pagination:after {
+  clear: both;
+}
+.pagination .next {
+  float: right;
+}
+.pagination .previous {
+  float: left;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #e5e5e5;
+  font: normal 13px Roboto, arial, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 15px 0px;
+  overflow-y: scroll;
+  visibility: visible;
+}
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0px auto;
+}
+.text-success {
+  color: #5cb85c;
+}
+.text-error {
+  color: #d9534f;
+}
